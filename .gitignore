@@ -1,11 +1,12 @@
-# Ignore all HTML files
+# Ignore all HTML files except index.html
 *.html
-# Except index.html
 !index.html
+
 # Ignore all CSS files in the styles directory
 styles/*.css
+
 # Ignore all JS files in the scripts directory
 scripts/*.js
-# Ignore all image files in the images directory
-image/*
 
+# Ignore all image files in the images directory
+images/*

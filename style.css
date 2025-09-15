@@ -165,7 +165,7 @@
 
 .circle:nth-child(2) {
     width: 30rem;
-    background-image: url("image/RavB.png");
+    background-image: url("images/RavB.png");
     background-size: 100%;
     background-repeat: no-repeat;
     border: .5rem solid #fff;
