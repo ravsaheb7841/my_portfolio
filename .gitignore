@@ -8,5 +8,4 @@ styles/*.css
 # Ignore all JS files in the scripts directory
 scripts/*.js
 
-# Ignore all image files in the images directory
-images/*
+
