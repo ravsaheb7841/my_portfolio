@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Use Font Awesome 6 for better compatibility -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Portfolio Section -->
+    <div class="portfolio-container" id="home">
+        <ul class="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="left-container">
+            <div class="icons">
+                <a href="https://www.threads.com/@ravsaheb7841"><i class="fa-brands fa-threads"></i></a>
+                <a href="https://www.linkedin.com/in/ravsaheb-bansode-a75a802a0/"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/ravsaheb7841"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/ravsaheb7841/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="content">
+                <p class="intro">Hi I Am <span>Ravsaheb Bansode</span></p>
+                <h1>Data Scientist.</h1>
+                <p class="detail">I am an enthusiastic student passionate about data science, exploring insights from data and building intelligent solutions.</p>
+                <div class="btn-container">
+                    <button onclick="window.open('/image/Resume.pdf', '_blank')">Resume</button>
+                    <button onclick="window.open('https://github.com/ravsaheb7841?tab=repositories', '_blank')">View
+                        Project</button>
+                </div>
+            </div>
+        </div>
+        <div class="right-container"></div>
+        <div class="design">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <!-- Work Section -->
+    <div class="work-container" id="work">
+        <h2 class="section-title">My Work</h2>
+        <div class="work-grid">
+            <div class="work-card">
+                <img src="image/project1.png" alt="Project 1">
+                <h3>Dream Analyzer</h3>
+                <p>AI-powered Dream Analysis Tool using NLP.</p>
+                <a href="https://github.com/ravsaheb7841/dream-analyzer" class="btn-outline">View Details</a>
+            </div>
+            <div class="work-card">
+                <img src="image/project2.png" alt="Project 2">
+                <h3>News Dashboard</h3>
+                <p>Real-time news updates and analytics dashboard.</p>
+                <a href="https://github.com/ravsaheb7841/news_dashboard_web" class="btn-outline">View Details</a>
+            </div>
+            <div class="work-card">
+                <img src="image/project3.png" alt="Project 3">
+                <h3>Olympic Medal Analysis</h3>
+                <p>Data analysis and visualization of Olympic medal statistics.</p>
+                <a href="https://github.com/ravsaheb7841/oda_ml" class="btn-outline">View Details</a>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Skills Section -->
+    <div class="skills-container" id="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fa-brands fa-python skill-icon"></i>
+                <h3>Python</h3>
+                <p>Proficient in Python programming for data analysis, machine learning, and automation tasks.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-database skill-icon"></i>
+                <h3>Data Analysis</h3>
+                <p>Transforming raw data into actionable insights using statistical analysis and visualization.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-chart-line skill-icon"></i>
+                <h3>Data Visualization</h3>
+                <p>Creating compelling visual stories to communicate data-driven insights effectively.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-robot skill-icon"></i>
+                <h3>Machine Learning</h3>
+                <p>Building predictive models and intelligent systems to solve complex problems.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-database skill-icon"></i>
+                <h3>SQL</h3>
+                <p>Proficient in SQL for database management, data manipulation, and complex queries.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-project-diagram"></i>
+                <h3>End-to-End Solutions</h3>
+                <p>Delivering comprehensive solutions from data collection to model deployment.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-container" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Who Am I?</h3>
+                <p>Hi, I’m Ravsaheb Bansode, a passionate Data Scientist who loves solving real-world problems with data
+                    and AI.</p>
+                <p>I enjoy working on projects like Dream Analyzer, News Dashboard, and Olympic Medal Analysis.</p>
+                <p>I believe in continuous learning and using creativity + technology to build meaningful solutions.</p>
+                <p>Exploring. Learning. Creating.</p>
+                <a href="/image/Resume.pdf" class="btn-outline">Download Resume</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Contact Section -->
+    <div class="contact-container" id="contact">
+  <h2 class="section-title">Contact Me</h2>
+  <form action="https://api.web3forms.com/submit" method="POST">
+      <!-- Web3Forms API key -->
+      <input type="hidden" name="access_key" value="9b415f80-142e-4030-954e-3c218efa22d1">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn-outline">Send Message</button>
+  </form>
+</div>
+
+
+
+
+    <footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2025 Ravsaheb Bansode. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/ravsaheb-bansode-a75a802a0/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/ravsaheb7841"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
