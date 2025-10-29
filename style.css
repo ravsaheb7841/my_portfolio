@@ -118,17 +118,19 @@ nav a:hover::after {
   gap: 40px;
 }
 
+/* Hero Image */
 .hero-img {
   width: 70%;
   border-radius: 15px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  animation: float 4s ease-in-out infinite;
+  /* removed animation to stop movement */
+  /* animation: float 4s ease-in-out infinite; */
 }
 
-/* Floating Animation */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+/* Ensure any float-up class does not animate */
+.float-up {
+  animation: none !important;
+  transform: none !important;
 }
 
 /* Hero Text */
@@ -279,7 +281,7 @@ nav a:hover::after {
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
 }
 

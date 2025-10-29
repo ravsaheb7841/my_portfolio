@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ravsaheb | Portfolio</title>
 
+  <!-- Favicon (replace URL with your favicon URL) -->
+  <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://example.com/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="https://example.com/apple-touch-icon.png" sizes="180x180">
+
   <!-- Styles and Fonts -->
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -41,7 +46,7 @@
       <div class="role">Data Scientist</div>
       <div class="buttons">
         <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="images/Resume.pdf" class="btn-outline" download>Download CV</a>
+        <a href="images/Resume.pdf" class="btn-outline" download>Download Resume</a>
       </div>
 
       <!-- Social Links -->
@@ -148,16 +153,22 @@
   <section id="contact" class="contact fade-in">
     <h2 class="section-title">Contact Me</h2>
     <div class="contact-container">
-      <form onsubmit="sendMail(event)">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
+      <form action="https://formsubmit.co/bansoderav@gmail.com" method="POST">
+        <!-- Honeypot -->
+        <input type="text" name="_honey" style="display:none">
+        <!-- Disable Captcha -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Success Page -->
+        <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
+        
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
-
       <div class="contact-info">
-        <p><i class="fas fa-envelope"></i> bansoderav@gmail.com</p>
-        <p><i class="fas fa-phone"></i> +91 9021492988</p>
+        <p><i class="fas fa-envelope"></i>bansoderav@gmail.com</p>
+        <p><i class="fas fa-phone"></i>+91 9021492988</p>
         <p><i class="fas fa-map-marker-alt"></i> Khalati, India</p>
       </div>
     </div>

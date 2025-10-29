@@ -2,25 +2,39 @@
 const themeToggle = document.getElementById('theme-toggle');
 const icon = themeToggle.querySelector('i');
 
-// Check and apply saved theme
+// Apply saved theme: default = dark
 const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-  document.documentElement.setAttribute('data-theme', 'dark');
-  icon.classList.replace('fa-moon', 'fa-sun');
+if (savedTheme === 'light') {
+  document.documentElement.setAttribute('data-theme', 'light');
+} else {
+  // default dark (no data-theme attribute so :root dark variables apply)
+  document.documentElement.removeAttribute('data-theme');
 }
 
-// Toggle between light and dark mode
-themeToggle.addEventListener('click', () => {
-  const darkMode = document.documentElement.getAttribute('data-theme') === 'dark';
-  if (darkMode) {
-    document.documentElement.removeAttribute('data-theme');
-    localStorage.setItem('theme', 'light');
-    icon.classList.replace('fa-sun', 'fa-moon');
+function updateThemeIcon() {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  if (isLight) {
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon'); // show moon to indicate "switch to dark"
   } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
-    icon.classList.replace('fa-moon', 'fa-sun');
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun'); // show sun to indicate "switch to light"
   }
+}
+updateThemeIcon();
+
+themeToggle.addEventListener('click', () => {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  if (isLight) {
+    // switch to dark
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    // switch to light
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+  }
+  updateThemeIcon();
 });
 
 // ===== Fade-in Animation on Scroll =====
